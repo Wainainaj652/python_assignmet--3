@@ -1,0 +1,22 @@
+#python assignment  week 3
+while True:
+    try:
+
+        original_price = int(input("Please enter  the original price : "))
+        discountPercent = int(input("Please enter  percentage discount: "))
+        break
+    except ValueError:
+        print("Invalid input  please enter a  number")
+        print()
+
+def calculate_discount(price,discount_percent):
+    if discount_percent>=20:
+        discounted_price=price-(price*discount_percent/100)
+        print(f"New price is {discounted_price}")
+        return discounted_price
+    else:
+        print(price)
+        return price
+
+
+calculate_discount(original_price,discountPercent)
